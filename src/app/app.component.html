@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-6">
+    <h2>Listado Notas</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Titulo</th>
+          <th>Desripción</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of mis_Notas">
+          <td>{{n.id}}</td>
+          <td>{{n.titulo}}</td>
+          <td>{{n.descripcion}}</td>
+          <td><a (click) = "verNota(n)" class="btn btn-info">Editar</a></td>
+          <td><a (click) = "eliminarNota(n)" class="btn btn-danger">Eliminar</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <a (click)="nuevaNota()" class="btn btn-info">Nueva Nota</a>
+  </div>
+  <div class="col-md-6" *ngIf="mostrarForm">
+    <h2>Agregar Nota</h2>
+    <br>
+    <input type="text" class="form-control" [(ngModel)] = "titulo">
+    <br>
+    <textarea class="form-control" cols="30" rows="10" [(ngModel)]="descripcion"></textarea>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <a (click) = "guardarNota()" class="btn btn-success">Guardar</a>
+      </div>
+      <div class="col-md-6">
+        <a (click) = "cancelar()" class="btn btn-danger">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</div>
