@@ -16,6 +16,7 @@ export class AppComponent {
     {id: 3 , titulo : 'Nota 3', descripcion : 'Descripción Nota 3'},
     {id: 4 , titulo : 'Nota 4', descripcion : 'Descripción Nota 4'},
     {id: 5 , titulo : 'Nota 5', descripcion : 'Descripción Nota 5'},
+    {id: 5 , titulo : 'Nota 6', descripcion : 'Descripción Nota 6'},
   ];
 
   nota = {id : null , titulo : null , descripcion : null};
